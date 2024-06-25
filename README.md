@@ -1,6 +1,4 @@
-# RotorToolBox
- Basic Functions used throughout the thesis
- ROTOR TOOLBOX
+# ROTOR TOOLBOX
 Rotor Toolbox for novel damping mechanism investigations
 
 --------------------------------------------------------------------------
