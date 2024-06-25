@@ -4,17 +4,21 @@ Rotor Toolbox for novel damping mechanism investigations
 --------------------------------------------------------------------------
 HOW TO INSTALL RotorToolBox
 
-1. Download a fresh copy of the source code of RotorToolBox at insertgit_page
+1. Create a folder somewhere in your PC
+   ```
+   mkdir RotorToolBox
+   ```
+
+2. Clone the git repository to the folder you just created
+   ```
+   git clone https://github.com/alexal00/RotorToolBox.git
+   ```
+   or download a fresh copy of the source code of RotorToolBox at [git page](https://github.com/alexal00/RotorToolBox)
 
    Once you have donwloaded the source code follow the 
    next instructions.
 
-2. Look for the file RotoToolBoxyyyyl.tgz where yyyy is the year and l 
-   is a letter, and uncompressed it somewhere in your PC box. Let's say 
-   that the directory is "path_to_rotortoolbox". After uncompressing the file 
-   a directory called RotorToolBox will be created.
-
-3. Startup matlab and add "path_to_rotortoolbox/RotorToolBox" directory to 
+3. Startup Matlab and add "path_to_rotortoolbox/RotorToolBox" directory to 
    MATLAB search path. To achieve this, you should do either:
 
     * Look for the "Environment" then choose "Set Path" and Add Folder and select "path_to_rototoolbox/RotorToolBox" then Save and Close
