@@ -1,4 +1,15 @@
+% Author: Alejandro Alvaro, 2023-2024
 function data = hammond1974data
+% hammond1974data Parameters defining the rotor described by Hammond [1]
+% References: C. E. Hammond. An application of floquet theory to prediction of 
+%             mechanical instability. Journal of the American Helicopter Society,
+%              19(4):14--23, October 1974. doi: https://doi.org/10.4050/jahs.19.14.
+% Input :
+%
+% Output:
+%       * data : structure that contains all the relevant parametrs used to
+%                define the Hammond rotor
+
 %% Hammond [1974] data
 % Blade data
 data.n_b = 4;        % Number of blades

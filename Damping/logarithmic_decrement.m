@@ -16,7 +16,35 @@ function varargout = logarithmic_decrement(time, displacement, varargin)
     % Outputs:
     %       * zeta_est: Estimated damping ratio
     %       * delta_avg (optional): Average logarithmic decrement
-
+    % Example:
+    % Example script to generate time history and calculate damping
+    % % Parameters
+    % M = 1.0;  % mass
+    % K = 20.0;  % stiffness
+    % C = 0.5;  % damping coefficient
+    % 
+    % % Define the system of ODEs
+    % damped_oscillator = @(t, y) [y(2); -(C/M)*y(2) - (K/M)*y(1)];
+    % 
+    % % Initial conditions
+    % x0 = 1.0;  % initial displacement
+    % v0 = 0.0;  % initial velocity
+    % initial_conditions = [x0; v0];
+    % 
+    % % Time span for the solution
+    % t_span = [0 20];
+    % t_eval = linspace(t_span(1), t_span(2), 1000);
+    % 
+    % % Solve the ODE
+    % [t, y] = ode45(damped_oscillator, t_eval, initial_conditions);
+    % 
+    % % Extract displacement
+    % x = y(:, 1);
+    % 
+    % % Calculate damping ratio and logarithmic decrement
+    % % Set plot_flag to true to enable plotting
+    % [zeta_est, delta_avg] = logarithmic_decrement(t, x,'plotflag',true);
+    
     % Check that the input vectors are the same length
     if length(time) ~= length(displacement)
         error('Time and displacement vectors must be the same length');
@@ -43,7 +71,7 @@ function varargout = logarithmic_decrement(time, displacement, varargin)
     end
     
     % Process peaks using processVector
-    [~, ~, peaks, idx] = processVector(peaks, locs);
+    [~, ~, peaks, idx] = processVector(peaks);
     locs = locs(idx);
 
     % Ensure there are enough peaks to calculate the logarithmic decrement

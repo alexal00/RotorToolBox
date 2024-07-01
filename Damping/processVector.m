@@ -12,7 +12,7 @@ function [posCount, negCount, processedVector, processedIndices] = processVector
     % in processedIndices.
     %
     % Inputs:
-    %       * v : Input vector to process
+    %       * v : Value fo the peaks from the time history
     %
     % Outputs:
     %       *posCount : Count of positive elements
